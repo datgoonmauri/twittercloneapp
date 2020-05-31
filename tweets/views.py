@@ -29,5 +29,5 @@ def addtweet(request, user_id):
 
 
 def tweetview(request, tweet_id):
-	tweet = Tweet.objects.get(id=tweet_id).order_by('date')
+	tweet = Tweet.objects.get(id=tweet_id)
 	return render(request, 'tweet.html', {'tweet': tweet})

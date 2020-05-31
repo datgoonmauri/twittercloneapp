@@ -18,7 +18,7 @@ background: #144E75; }
 <div class="profile">
 Logged In: {{ user.username }}
 {% for tweet in user_tweets %}
-<p>{{tweet.date}} | {{tweet.author}} | {{tweet.tweet}}}</p>
+<p>{{tweet.date}} | {{tweet.author}} |  <a href= {%url 'tweet' tweet_id=tweet.id %}>{{ tweet.tweet }}</></a>}</p>
 {% endfor %}
 <div class="profile">
 <p>Followers: {{ following_count }}</p>
