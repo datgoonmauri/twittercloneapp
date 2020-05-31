@@ -1,0 +1,20 @@
+
+<div>
+    <ul>
+    {% if notifications %}
+        {% for notify in notification %}
+        <li>
+                <a href='/twitteruser/{{ notified_user.tweet.tweet_author.id }}/'>{{ notify.tweet.tweet_author.username
+                    }}</a> - {{ notified_user.tweet.date }}
+        </li>1
+                <ul>
+                    <li>
+                        {{current_user.tweet.body}}<a href="notification/">Notifications</a>
+                        {{ notification.tweet.body }}
+                    </li>
+        {% endfor %}
+    {% else %}
+    <p>No new notifications</p>
+    {% endif %}
+    </ul>
+</div>
